@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Final Project</title>
+    <link rel="stylesheet" href="semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ui center aligned container" style="margin: 3% 0px 3% 0px">
+        <div class="ui huge center header" style="font-family: 'Kanit', sans-serif;">My Final Project</div>
+    </div>
+    <div class="ui center aligned container" style="margin: 3% 0px 3% 0px;">
+        <h2 class="kanit" style="text-align:left;">ชื่อโปรเจค เกมส์แข่งรถฝึกทักษะกระบวนการเขียนโปรแกรม</h2>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;โปรเจคจบของผมคือเกมส์แข่งรถฝึกทักษะกระบวนการเขียนโปรแกรม ที่มาของโปรเจค ผมอยากให้โปรเจคนี้ไปช่วนในการเรียนการสอนของ
+        การเขียนโปรแกรมสำหรับเด็กครับ ตัวโปรเจคประกอบด้วยส่วนของ hardware และ software ครับ ส่วนที่้เป็น hardware นั้น คือรถ ที่สามารถควบคุมและสั่งการได้ชุดควบคุมของเว็บ
+        โดยตัวนั่นก็คือส่วนของ software ครับ 
+        </p>
+        <h2 class="kanit" style="text-align:left;;color: rgb(79, 79, 235)">Hardware</h2>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;ส่วนประกอบของ hardware จะประกอบไปด้วย</p>
+        <div class="ui segments">
+            <div class="ui segment"><p class="kanit-on-segment">1.nodemcu</p></div>
+            <div class="ui segment"><p class="kanit-on-segment">2.ตัวรถ(โมเดลรถ มอเตอร์ แบตเตอรรี่)</p></div>
+            <div class="ui segment"><p class="kanit-on-segment">3.arduino uno r3</p></div>
+            <div class="ui segment"><p class="kanit-on-segment">4.rfid reader</p></div>
+            <div class="ui segment"><p class="kanit-on-segment">5.motor driver</p></div>
+        </div>
+        <p class="kanit" style="font-size:20px;text-align:left">ตัว nodemcu จะการเชื่อมต่อผ่านไวไฟ และทำการอ่านค่าที่เปลี่ยนไปใน ดาต้าเบส (firebase) เพื่ออ่านข้อมูลแล้วส่งคำสั่งไปที่ arduino ซึ่งมีหน้าที่ ขับรถ และสั่งการอ่านค่า rfid
+        เมื่อถูกสั่งให้อ่านค่าหรือเดินหน้ารถ เลี้ยวซ้ายเลี้ยวขวา เสร็จแล้ว จะส่งสเตทการทำงานไปยัง nodemcu เพื่อให้ nodemcu นั้นส่งค่าขึ้นดาต้าเบสไม่ว่าจะเป็นค่าของบัตร rfid หรือ ค่าสเตทการทำงานของรถ</p>
+        <h2 class="kanit" style="text-align:left;;color: rgb(8, 184, 75)">Software</h2>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;ส่วนประกอบของ software จะประกอบไปด้วย</p>
+        <div class="ui segments">
+            <div class="ui segment"><p class="kanit-on-segment">1.เว็บแอพพลิเคชั่น</p></div>
+            <div class="ui segment"><p class="kanit-on-segment">2.ดาต้าเบส (firebase)</p></div>
+        </div>
+        <p class="kanit" style="font-size:20px;text-align:left">ตัวเว็บแอพพลิเคชั่นคือส่วนที่ใช้ติดต่อกับผู้ใช้โดยตัวเว็บแอพพลิเคชั่นนั้นจะมีหน้าต่างคะแนน และกรอบเส้นปะสำหรับให้ผู้ใช้นั้นเขียนโปรแกรมลงไป แต่โปรแกรมนี้ทำสำหรับเด็ก ผมจึงทำให้เด็กสามารถที่จะลากชุดคำสั่งมาวางในตัวโปรแกรมแล้วกดสั่งรันโปรแกรม หรือจะกดหยุดก็สามารถทำได้เช่นเดียวกันเราพยายามเขียนโปรแกรมให้เลียนแบบการเขียนโปรแกรมอย่างง่าย เสมือนแบบจำลอง โดยการลากวางเสมือนการใส่โค้ดแต่ลดความยุ่งยากของการเขียนเหลือแค่การลากวางชุดคำสั่ง และกดสั่งรัน หรือ  หยุด เสมือนการรันและหยุดการรันโปรแกรม แต่ถ้ามันแค่นี้มันก็จะไม่ใช่เกมส์เราเลยจึงเพิ่มความท้าทายโดยมีคำสั่งการอ่าน rfid เข้าไปในตัวโปรแกรมและเพิ่มผู้เล่นอีกคนหนึ่งเข้าไปในตัวโปรแกรม ทำให้โปรแกรมนั้นเล่นได้สองคนหรือจะมากกว่านั้นก็ได้แต่ตามจำนวนของรถที่มีอยู่ ณ ตอนนั้นแล้วส่งค่าคำนวณสเตทเข้าไปในโปรแกรมและดาต้าเบสและแสดงผลออกทางหน้าจอของทั้งสองฝ่ายครับ</p>
+        <h2 class="kanit" style="text-align:left;;color: rgb(164, 77, 235)">อธิบายวิธีเล่น ภายในสามบรรทัดจบ</h2>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;โยนแผ่น rfid หรือ ทำแผนที่เล่นด้วยวัสดุต่างๆ วางแผ่น rfid --> ผู้เล่นสั่งการควบคุมรถ แข่งขันเก็บคะแนนตามที่ตกลงกันไว้ --> ใครได้คะแนนครบก่อนคนนั้นเป็นฝ่ายชนะ รถคันเดิมไม่สามารถเก็บแผ่น rfid ซ้ำได้นะครับ ( ยกเว้นจะขึ้นรอบการแข่งแขันใหม่ )</p>
+        <h2 class="kanit" style="text-align:left;color: red">ปัญหาที่พบ</h2>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;ผมไม่ชินกับภาษาและการทำงานแบบ async สักเท่าไหร่ทำให้ติดปัญหาเยอะพอสมควรโดยตอนดึงข้อมูลเข้าออกนั้นผมไม่ทราบว่าข้อมูลนั้นต้องรอการดึงเสร็จจึงจะเริ่มใช้ได้ ผมคิดว่าถ้าสั่งงานไปแล้วดาต้าเบสจะดึงเสร็จแล้วโปรแกรมจะทำงานต่อ เหมือนกับภาษา php ที่ผมเคยทำมาแต่ตัว js นั้นเมื่อเรียกแล้วแต่ไม่ได้เขียน promise ไว้โปรแกรมจะแจ้ง error แล้วก็มีปัญหาประปราย แต่มันกลับทำให้ผมรู้สึกว่าภาษานี้หน้าสนใจครับ</p>
+        <p class="kanit" style="font-size:20px;text-align:left">&nbsp;&nbsp;&nbsp;อันนี้คือปัญหาใหญ่อีกอันครับ ผมต้องนั่งทำโปรเจคโดยรวมนั้น 90% ผมต้องทำทั้งหมด ทั้งก่อนแก้โปรเจค ก่อนเปลี่ยนโปรเจค และรูปเล่ม แต่ผมไม่อยากโทษใคร ถึงแม้ผมจะบ่นเยอะมากเลยช่วงนั้น ฮ๋าๆ ผมโทษตัวเองมากกว่าที่ไม่สามารถควบคุบหรือเป็นหัวหน้าทีมที่สามารถสั่งงานเพื่อนแล้วเพื่อนทำตามคำสั่งได้ บางที่มันอาจจะหนักเกินไปสำหรับเพื่อน โดยที่หายไป 10% นั้นผมสามารถแบ่งเป็นงานที่เพื่อนนั้นทำได้ออกจ่ายให้เพื่อนได้ทำงานแล้วเพื่อนก็สามารถทำได้</p>
+    
+        
+    </div>
+    
+    <script src="semantic.min.js"></script>
+</body>
+</html>
